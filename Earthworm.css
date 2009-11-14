@@ -20,7 +20,7 @@ comment, comment > punctuation {
 }
 
 function name, identifier.function, class name {
-	color: #ff0000;
+	color: #EE0F04;
 }
 
 function delimiter.parenthesis, function delimiter.separator {
@@ -94,7 +94,7 @@ php delimiter.embedded.source, php delimiter.embedded.source keyword {
 }
 
 php identifier.function > name {
-	color: #ff0000;
+	color: #EE0F04;
 	font-weight: normal;
 }
 
