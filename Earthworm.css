@@ -1,0 +1,117 @@
+/*
+  @theme Earthworm
+  @override-placeholders css, html, php, php-html
+  @author Ian Beck
+*/
+
+@base {
+	color: #fff;
+	background-color: #333;
+	insertion-point-color: #fff;
+	selection-background-color: #544E44;
+}
+
+string {
+	color: #abc837;
+}
+
+comment, comment > punctuation {
+	color: #AB9058;
+}
+
+function name, identifier.function, class name {
+	color: #ff0000;
+}
+
+function delimiter.parenthesis, function delimiter.separator {
+	color: #fff;
+}
+
+pointer, operator {
+	color: #fff;
+}
+
+keyword {
+	color: #e8bf6a;
+}
+
+variable {
+	color: #EDC1C3;
+}
+
+value {
+	color: #e8bf6a;
+}
+
+/* @group HTML */
+
+tag {
+	color: #e8bf6a;
+}
+
+html doctype, html doctype name, html doctype punctuation {
+	color: #AB9058;
+}
+
+html string value {
+	color: #abc837;
+}
+
+/* @end */
+
+/* @group CSS */
+
+css selector {
+	color: #EDC1C3;
+}
+
+css property-name {
+	color: #e8bf6a;
+}
+
+css property-value {
+	color: #abc837;
+}
+
+css punctuation.separator, css punctuation.terminator {
+	color: #fff;
+}
+
+embedded.css {
+	background: #24211D;
+}
+
+/* @end */
+
+/* @group PHP */
+
+php embedded.source {
+	background: #1a1a1a;
+}
+
+php delimiter.embedded.source, php delimiter.embedded.source keyword {
+	color: #fff;
+}
+
+php identifier.function > name {
+	color: #ff0000;
+	font-weight: normal;
+}
+
+php keyword.definition, php  keyword.constant.other {
+	color: #e8bf6a;
+}
+
+php variable {
+	color: #EDC1C3;
+}
+
+php metadata.phpDoc {
+	color: #AB9058;
+}
+
+php value {
+	background: #1a1a1a;
+}
+
+/* @end */
