@@ -43,17 +43,19 @@ value {
 	color: #e8bf6a;
 }
 
-/* @group HTML */
+/* @group HTML+XML */
 
 tag {
 	color: #e8bf6a;
 }
 
-html doctype, html doctype name, html doctype punctuation {
+html doctype, html doctype name, html doctype punctuation,
+xml processing-instruction, xml processing-instruction string, xml processing-instruction string value {
 	color: #AB9058;
 }
 
-html string value {
+html string value,
+xml string value {
 	color: #abc837;
 }
 
