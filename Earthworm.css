@@ -15,7 +15,7 @@ string {
 	color: #abc837;
 }
 
-comment, comment > punctuation {
+comment, comment.block, comment > punctuation {
 	color: #AB9058;
 }
 
@@ -108,7 +108,7 @@ embedded.js {
 
 /* @group PHP */
 
-php embedded.source {
+php embedded.source, embedded.source.php {
 	background: #1a1a1a;
 }
 
@@ -121,8 +121,9 @@ php identifier.function > name {
 	font-weight: normal;
 }
 
-php keyword.definition, php  keyword.constant.other {
+php keyword.definition, php  keyword.constant.other, php literal.keyword.constant {
 	color: #e8bf6a;
+	font-weight: normal;
 }
 
 php variable {
@@ -145,6 +146,22 @@ php.html tag name {
 
 php.html tag value {
 	background: #333;
+}
+
+php.html tag.doctype name {
+	color: #AB9058;
+}
+
+/* @end */
+
+/* @group ExpressionEngine */
+
+ee.tag, ee.operator, ee.attribute-name {
+	color: #EDC1C3;
+}
+
+ee.attribute {
+	color: #abc837;
 }
 
 /* @end */
