@@ -47,6 +47,7 @@ value {
 
 tag {
 	color: #e8bf6a;
+	spell-check: disabled;
 }
 
 html doctype, html doctype name, html doctype punctuation,
@@ -62,6 +63,10 @@ xml string value {
 /* @end */
 
 /* @group CSS */
+
+styling {
+	spell-check: disabled;
+}
 
 css selector {
 	color: #EDC1C3;
@@ -80,6 +85,22 @@ css punctuation.separator, css punctuation.terminator {
 }
 
 embedded.css {
+	background: #24211D;
+}
+
+/* @end */
+
+/* @group Javascript */
+
+js keyword, js storage {
+	color: #e8bf6a;
+}
+
+js > operator {
+	color: #fff;
+}
+
+embedded.js {
 	background: #24211D;
 }
 
@@ -114,6 +135,16 @@ php metadata.phpDoc {
 
 php value {
 	background: #1a1a1a;
+}
+
+/* PHP+HTML overrides */
+
+php.html tag name {
+	color: #e8bf6a;
+}
+
+php.html tag value {
+	background: #333;
 }
 
 /* @end */
