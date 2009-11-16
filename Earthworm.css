@@ -15,7 +15,7 @@ string {
 	color: #abc837;
 }
 
-comment, comment.block, comment > punctuation {
+comment, comment.block, comment > punctuation, comment.block > punctuation, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
 	color: #AB9058;
 }
 
@@ -36,7 +36,7 @@ keyword {
 }
 
 variable {
-	color: #EDC1C3;
+	color: #CDDE87;
 }
 
 value {
@@ -69,7 +69,7 @@ styling {
 }
 
 css selector {
-	color: #EDC1C3;
+	color: #CDDE87;
 }
 
 css property-name {
@@ -121,13 +121,13 @@ php identifier.function > name {
 	font-weight: normal;
 }
 
-php keyword.definition, php  keyword.constant.other, php literal.keyword.constant {
+php keyword.definition, php  keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null {
 	color: #e8bf6a;
 	font-weight: normal;
 }
 
-php variable {
-	color: #EDC1C3;
+php variable, php > variable, php > variable > operator, php string variable {
+	color: #CDDE87;
 }
 
 php metadata.phpDoc {
@@ -136,6 +136,10 @@ php metadata.phpDoc {
 
 php value {
 	background: #1a1a1a;
+}
+
+php identifier.function delimiter {
+	color: #fff;
 }
 
 /* PHP+HTML overrides */
@@ -157,7 +161,7 @@ php.html tag.doctype name {
 /* @group ExpressionEngine */
 
 ee.tag, ee.operator, ee.attribute-name {
-	color: #EDC1C3;
+	color: #CDDE87;
 }
 
 ee.attribute {
