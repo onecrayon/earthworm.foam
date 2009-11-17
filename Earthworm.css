@@ -60,6 +60,10 @@ xml string value {
 	color: #abc837;
 }
 
+html character.entity {
+	color: #CDDE87;
+}
+
 /* @end */
 
 /* @group CSS */
