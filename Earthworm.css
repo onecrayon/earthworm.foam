@@ -16,7 +16,7 @@ string {
 }
 
 comment, comment.block, comment > punctuation, comment.block > punctuation, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
-	color: #AB9058;
+	color: #776644;
 }
 
 function name, identifier.function, class name {
@@ -52,7 +52,7 @@ tag {
 
 html doctype, html doctype name, html doctype punctuation,
 xml processing-instruction, xml processing-instruction string, xml processing-instruction string value {
-	color: #AB9058;
+	color: #776644;
 }
 
 html string value,
@@ -114,6 +114,7 @@ embedded.js {
 
 php embedded.source, embedded.source.php {
 	background: #1a1a1a;
+	spell-check: disabled;
 }
 
 php delimiter.embedded.source, php delimiter.embedded.source keyword {
@@ -135,7 +136,7 @@ php variable, php > variable, php > variable > operator, php string variable {
 }
 
 php metadata.phpDoc {
-	color: #AB9058;
+	color: #776644;
 }
 
 php value {
@@ -157,7 +158,7 @@ php.html tag value {
 }
 
 php.html tag.doctype name {
-	color: #AB9058;
+	color: #776644;
 }
 
 /* @end */
