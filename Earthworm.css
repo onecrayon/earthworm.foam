@@ -15,7 +15,7 @@ string {
 	color: #abc837;
 }
 
-comment, comment.block, comment > punctuation, comment.block > punctuation, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
+comment, comment > punctuation, comment.block, comment.block > punctuation, comment.line, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
 	color: #776644;
 }
 
@@ -131,7 +131,7 @@ php keyword.definition, php  keyword.constant.other, php literal.keyword.constan
 	font-weight: normal;
 }
 
-php variable, php > variable, php > variable > operator, php string variable {
+php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign {
 	color: #CDDE87;
 }
 
