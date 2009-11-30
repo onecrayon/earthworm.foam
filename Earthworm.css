@@ -165,11 +165,21 @@ php.html tag.doctype name {
 
 /* @group ExpressionEngine */
 
-ee.tag, ee.operator, ee.attribute-name {
+ee.tag, ee.operator, ee.attribute-name,
+ee ee.tag > ee.name, ee ee.tag > ee.punctuation, ee ee.tag.conditional,
+ee ee.tag ee.attribute-name {
 	color: #CDDE87;
 }
 
-ee.attribute {
+ee ee.tag ee.attribute-name {
+	font-weight: normal;
+}
+
+ee ee.tag.self-closing.conditional {
+	background: #333;
+}
+
+ee.attribute, ee ee.tag ee.attribute {
 	color: #abc837;
 }
 
