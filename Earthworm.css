@@ -15,7 +15,7 @@ string {
 	color: #abc837;
 }
 
-comment, comment > punctuation, comment.block, comment.block > punctuation, comment.line, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
+comment, comment > punctuation, comment > delimiter, comment.block, comment.block > punctuation, comment.line, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
 	color: #776644;
 }
 
@@ -121,17 +121,17 @@ php delimiter.embedded.source, php delimiter.embedded.source keyword {
 	color: #fff;
 }
 
-php identifier.function > name {
+php function > name, php identifier.function > name {
 	color: #EE0F04;
 	font-weight: normal;
 }
 
-php keyword.definition, php  keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null {
+php keyword.definition, php keyword.constant.other, php > keyword.constant.other, php container keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null {
 	color: #e8bf6a;
 	font-weight: normal;
 }
 
-php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign {
+php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign, php delimiter.variable.begin {
 	color: #CDDE87;
 }
 
