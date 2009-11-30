@@ -1,14 +1,9 @@
-Earthworm is an [Espresso][esp] theme using a light-on-dark color
-scheme.
+Earthworm is an [Espresso][esp] theme dark and earthy colors.
 
-To install, move the file Earthworm.css into your Espresso themes folder:
+To preview Earthworm and for installation instructions, please see
+the Earthworm product page:
 
-    ~/Library/Application Support/Espresso/Themes/
-
-Relaunch Espresso, and select the theme in the program preferences to use it.
-
-Earthworm is still under development, and currently only explicitly supports
-HTML, CSS, and PHP.
+<http://onecrayon.com/products/earthworm/>
 
 Earthworm is released under an MIT license, so please feel free to contribute
 or port it elsewhere. You can also file feature
