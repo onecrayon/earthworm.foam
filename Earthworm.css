@@ -131,7 +131,7 @@ php keyword.definition, php  keyword.constant.other, php literal.keyword.constan
 	font-weight: normal;
 }
 
-php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign {
+php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign, php delimiter.variable {
 	color: #CDDE87;
 }
 
