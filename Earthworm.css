@@ -121,7 +121,7 @@ php delimiter.embedded.source, php delimiter.embedded.source keyword {
 	color: #fff;
 }
 
-php function > name, php identifier.function > name {
+php function > name, php identifier.function > name, php class > name {
 	color: #EE0F04;
 	font-weight: normal;
 }
@@ -145,6 +145,10 @@ php value {
 
 php identifier.function delimiter {
 	color: #fff;
+}
+
+php identifier.function delimiter.quote {
+	color: #abc837;
 }
 
 /* PHP+HTML overrides */
