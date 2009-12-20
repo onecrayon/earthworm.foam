@@ -188,3 +188,27 @@ ee.attribute, ee ee.tag ee.attribute {
 }
 
 /* @end */
+
+/* @group ColdFusion */
+
+cfm.tag {
+	color: #CDDE87;
+}
+
+cfm operator, cfm keyword {
+	color: #e8bf6a;
+}
+
+cfml.embedded output {
+	color: #fff;
+}
+
+cfml.embedded coldfusion.embedded {
+	color: #e8bf6a
+}
+
+function.cfm > parenthesis {
+	color: #CDDE87;
+}
+
+/* @end */
