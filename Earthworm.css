@@ -126,9 +126,13 @@ php function > name, php identifier.function > name, php class > name {
 	font-weight: normal;
 }
 
-php keyword.definition, php keyword.constant.other, php > keyword.constant.other, php container keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null {
+php keyword.definition, php keyword.constant.other, php > keyword.constant.other, php container keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null, php keyword.modifier, php literal.numeric > numeric {
 	color: #e8bf6a;
 	font-weight: normal;
+}
+
+php literal.numeric > numeric {
+	background: #1a1a1a;
 }
 
 php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign, php delimiter.variable.begin {
@@ -185,6 +189,30 @@ ee ee.tag.self-closing.conditional {
 
 ee.attribute, ee ee.tag ee.attribute {
 	color: #abc837;
+}
+
+/* @end */
+
+/* @group Actionscript */
+
+as3 keyword.as3, as3 keyword.bool {
+	color: #e8bf6a;
+}
+
+as3 keyword.function.as3 {
+	color: #EE0F04;
+}
+
+as3 method name, as3 keyword.operators.as3 {
+	color: #fff;
+}
+
+as3 integral.value {
+	background: #333;
+}
+
+as3 keyword.class.as3 {
+	color: #CDDE87;
 }
 
 /* @end */
