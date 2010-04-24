@@ -92,12 +92,21 @@ embedded.css {
 	background: #24211D;
 }
 
+css keyword.important {
+	color: #abc837;
+	font-weight: bold;
+}
+
 /* @end */
 
 /* @group Javascript */
 
 js keyword, js storage {
 	color: #e8bf6a;
+}
+
+js constant {
+	color: #CDDE87;
 }
 
 js > operator {
