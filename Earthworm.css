@@ -1,53 +1,106 @@
 /*
   @theme Earthworm
-  @override-placeholders css, html, php, php-html
+  @override-placeholders css, html, php, php-html, javascript, python
+  @author Ka Yue (http://ka-yue.com)
   @author Ian Beck
 */
 
 @base {
-	color: #fff;
-	background-color: #333;
-	insertion-point-color: #fff;
+	color: #FFF;
+	background-color: #252525;
+	insertion-point-color: #FFF;
 	selection-background-color: #544E44;
+	current-line-background-color: #FFFFFF;
+	spell-check: disabled;
 }
 
-string {
-	color: #abc837;
+// String
+string,
+string *,
+php string.quoted, php string.quoted * {
+	color: #bbd065;
 }
 
-comment, comment > punctuation, comment > delimiter, comment.block, comment.block > punctuation, comment.line, comment.line > punctuation, comment.single-line, comment.single-line > punctuation {
+// SQL
+string sql {
+    color: #d4e784;
+}
+
+comment, 
+comment > punctuation, 
+comment > delimiter, 
+comment.block, 
+comment.block > punctuation, 
+comment.line, comment.line > punctuation, 
+comment.single-line, comment.single-line > 
+punctuation {
 	color: #776644;
 }
 
-function name, identifier.function, class name {
-	color: #EE0F04;
+// function name
+class name, 
+function name, 
+js function,
+js entity.name.function {
+	color: #ffa92c;
+}
+
+// build-in function
+support.function,
+support.function *,
+js support.function,
+php identifier.function name {
+    color: #f89e65;
 }
 
 function delimiter.parenthesis, function delimiter.separator {
 	color: #fff;
 }
 
-pointer, operator {
-	color: #fff;
+pointer, php pointer,
+delimiter,
+delimiter *,
+brace,
+punctuation {
+	color: #FFF;
 }
 
-keyword {
+// keywords (function, if, this, modifier ...)
+keyword,
+keyword.control {
+	color: #fff685;
+}
+
+// operator
+operator,
+js operator,
+php operator {
+    color: #FFF;
+}
+
+// variable identifier
+identifier,
+variable {
 	color: #e8bf6a;
 }
 
-variable {
-	color: #CDDE87;
+constant {
+    color: #e3927c;
 }
 
 value {
-	color: #e8bf6a;
+	color: #FFF;
+}
+
+integral.value {
+    color: #bdb7f5;
+    background: #222;
 }
 
 /* @group HTML+XML */
 
-tag {
-	color: #e8bf6a;
-	spell-check: disabled;
+text.html.basic {
+    color: #FFF;
 }
 
 html doctype, html doctype name, html doctype punctuation,
@@ -55,13 +108,14 @@ xml processing-instruction, xml processing-instruction string, xml processing-in
 	color: #776644;
 }
 
-html string value,
-xml string value {
-	color: #abc837;
+tag,
+tag * {
+	color: #e8bf6a;
 }
 
-html character.entity {
-	color: #CDDE87;
+html tag entity.name,
+xml tag entity.name {
+    color: #f9d488;
 }
 
 /* @end */
@@ -80,7 +134,8 @@ css property-name {
 	color: #e8bf6a;
 }
 
-css property-value {
+css property-value,
+css property-value punctuation.definition {
 	color: #abc837;
 }
 
@@ -88,33 +143,28 @@ css punctuation.separator, css punctuation.terminator {
 	color: #fff;
 }
 
-embedded.css {
-	background: #24211D;
-}
-
-css keyword.important {
-	color: #abc837;
-	font-weight: bold;
-}
-
 /* @end */
 
 /* @group Javascript */
 
-js keyword, js storage {
-	color: #e8bf6a;
+// variables
+js,
+js variable,
+js variable.parameter {
+    color: #e8bf6a;
+    spell-check: disabled;
 }
 
-js constant {
-	color: #CDDE87;
+// window, className etc
+js support,
+js support.constant {
+    color: #fff6a7;
 }
 
-js > operator {
-	color: #fff;
-}
-
-embedded.js {
-	background: #24211D;
+// keywords
+js storage.type,
+js keyword.operator.new {
+    color: #fff6a7;
 }
 
 /* @end */
@@ -122,56 +172,61 @@ embedded.js {
 /* @group PHP */
 
 php embedded.source, embedded.source.php {
-	background: #1a1a1a;
 	spell-check: disabled;
 }
 
-php delimiter.embedded.source, php delimiter.embedded.source keyword {
-	color: #fff;
+php delimiter.embedded.source, 
+php delimiter.embedded.source keyword {
+	color: #FFF;
 }
 
-php function > name, php identifier.function > name, php class > name {
-	color: #EE0F04;
-	font-weight: normal;
+// keywords (public, function, modifier)
+php keyword.constant.class,
+php keyword.definition,
+php keyword.modifier {
+    color: #ded89e;
 }
 
-php keyword.definition, php keyword.constant.other, php > keyword.constant.other, php container keyword.constant.other, php literal.keyword.constant, php literal.keyword.bool, php literal.keyword.null, php keyword.modifier, php literal.numeric > numeric {
+// variables & parameters
+php identifier.variable, 
+php identifier.variable *,
+php identifier.variable.class.static.property property.name,    // self::$instance 
+php identifier.parameter * {
 	color: #e8bf6a;
-	font-weight: normal;
 }
 
-php literal.numeric > numeric {
-	background: #1a1a1a;
+// object property, method & class name
+php identifier.object.property,
+php identifier.function.object.method name {
+    color: #f4e7b5;
 }
 
-php identifier.variable, php > variable, php > variable > operator, php string variable, php identifier.variable > dollar-sign, php delimiter.variable.begin {
-	color: #CDDE87;
+// literal keywords (true/false)
+php literal.keyword,
+php literal.keyword * {
+    color: #f8c2d9;
 }
 
-php metadata.phpDoc {
+// unkown constant
+php keyword.constant.other,
+php keyword.constant.echo {
+    color: #FFF;
+}
+
+// php doc
+php metadata * {
 	color: #776644;
-}
-
-php value {
-	background: #1a1a1a;
-}
-
-php identifier.function delimiter {
-	color: #fff;
-}
-
-php identifier.function delimiter.quote {
-	color: #abc837;
 }
 
 /* PHP+HTML overrides */
 
-php.html tag name {
-	color: #e8bf6a;
+// php inside attribute
+php.html attribute-value.value embedded.block delimiter {
+    color: #FFF;
 }
 
-php.html tag value {
-	background: #333;
+php.html tag name {
+	color: #e8bf6a;
 }
 
 php.html tag.doctype name {
@@ -249,3 +304,14 @@ function.cfm > parenthesis {
 }
 
 /* @end */
+
+/* @group Python */
+python,
+python variable {
+    color: #e8bf6a;
+    spell-check: disabled;
+}
+
+python parameters {
+    color: #FFF;
+}
