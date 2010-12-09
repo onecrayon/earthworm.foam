@@ -17,7 +17,7 @@ tag, source, sourcecode, styling {
 	spell-check: disabled;
 }
 
-comment {
+comment, comment > punctuation {
 	color: #776644;
 }
 
@@ -122,12 +122,20 @@ js variable {
 	color: #fff;
 }
 
+js variable.string {
+	color: #abc837;
+}
+
 js constant {
 	color: #CDDE87;
 }
 
 js class.constructor > variable {
 	color: #EE0F04;
+}
+
+js keyword.language {
+	color: #CDDE87;
 }
 
 /* @end */
@@ -165,6 +173,26 @@ php constant.numeric, php constant.language {
 phpDoc > keyword {
 	color: #776644;
 	font-weight: bold;
+}
+
+/* @end */
+
+/* @group RegEx */
+
+regex, regex.literal > punctuation.definition {
+	color: #abc837;
+}
+
+regex punctuation.group {
+	color: #e8bf6a;
+}
+
+regex keyword, regex operator, regex escaped, regex character-class, regex character-class > punctuation {
+	color: #CDDE87;
+}
+
+regex > regex.group, regex.group > punctuation {
+	background: rgba(255, 255, 255, 0);
 }
 
 /* @end */
