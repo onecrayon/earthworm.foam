@@ -1,6 +1,6 @@
 /*
   @theme Earthworm
-  @override-placeholders css, html, php
+  @override-placeholders css, html, php, markdown
   @author Ian Beck
 */
 
@@ -33,6 +33,11 @@ keyword, keyword.operator, constant, numeric, character {
 	color: #e8bf6a;
 }
 
+comment keyword {
+	color: #776644;
+	font-weight: bold;
+}
+
 variable {
 	color: #CDDE87;
 }
@@ -42,7 +47,7 @@ function, definition name {
 }
 
 invalid {
-	color: #600;
+	color: #fff;
 	background: rgba(150, 0, 0, .8);
 }
 
@@ -85,7 +90,7 @@ css property-name {
 	color: #e8bf6a;
 }
 
-css property-value {
+css property-value, css property-value constant, css property-value keyword {
 	color: #abc837;
 }
 
@@ -130,12 +135,28 @@ js constant {
 	color: #CDDE87;
 }
 
-js class.constructor > variable {
+js class.constructor > variable, js function.definition name {
 	color: #EE0F04;
 }
 
 js keyword.language {
 	color: #CDDE87;
+}
+
+/* @end */
+
+/* @group Apache */
+
+apache keyword.directive {
+	color: #CDDE87;
+}
+
+apache tag > keyword {
+	color: #e8bf6a;
+}
+
+apache variable {
+	color: #e5d08b;
 }
 
 /* @end */
@@ -170,7 +191,7 @@ php constant.numeric, php constant.language {
 	color: #e8bf6a;
 }
 
-phpDoc > keyword {
+php comment > keyword {
 	color: #776644;
 	font-weight: bold;
 }
@@ -193,6 +214,55 @@ regex keyword, regex operator, regex escaped, regex character-class, regex chara
 
 regex > regex.group, regex.group > punctuation {
 	background: rgba(255, 255, 255, 0);
+}
+
+/* @end */
+
+/* @group Markdown */
+
+markdown > punctuation.definition, markdown *:not(html,comment) punctuation.definition, markdown separator {
+  color: #776644;
+}
+
+markdown separator, markdown hard-break {
+  background: #444;
+}
+
+markdown header {
+  font-weight: bold;
+}
+
+markdown bold {
+  font-weight: bold;
+}
+
+markdown italic {
+  font-style: italic;
+}
+
+markdown bold italic, markdown italic bold {
+  font-weight: bold;
+  font-style: italic;
+}
+
+markdown code {
+  color: #e8bf6a;
+}
+
+markdown link, markdown image {
+  color: #CDDE87;
+}
+
+markdown link > punctuation, markdown image > punctuation {
+  color: #776644;
+}
+
+markdown url, markdown email {
+  color: #abc837;
+}
+
+markdown keyword.reference {
+  color: #776644;
 }
 
 /* @end */
